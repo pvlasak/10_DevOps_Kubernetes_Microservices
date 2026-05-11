@@ -4,7 +4,7 @@
 - `charts` directory is created to collected different helm charts
 - `values` directory collects the values files configuriting the template files inside the `charts` directory. 
 
-- *helm install -f <value-file.yaml> <release-name> <chart-name>* - deploys the microservice in the kubernetes cluster
+- *helm install -f <value-file.yaml> <release-name> <chart-name> * - deploys the microservice in the kubernetes cluster
 - *helm uninstall <relase-name>* - uninstall the helm release
 
 - `helmfile.yaml` - helps to deploy multiple releases on cluster 
