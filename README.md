@@ -1,3 +1,18 @@
+### This repository is forked from Google repository
+
+
+- `charts` directory is created to collected different helm charts
+- `values` directory collects the values files configuriting the template files inside the `charts` directory. 
+
+- *helm install -f values/<value-file.yaml> <release-name> <chart-name>* - deploys the microservice in the kubernetes cluster
+- *helm uninstall <relase-name>* - uninstall the helm release
+
+- `helmfile.yaml` - helps to deploy multiple releases on cluster 
+- *helmfile sync* - compare actual state in the cluster with the desired state, executes updates, installation of the services. 
+- *helmfile destroy* - terminates releases
+
+---------------------------------------------------------------
+
 <p align="center">
 <img src="/src/frontend/static/icons/Hipster_HeroLogoMaroon.svg" width="300" alt="Online Boutique" />
 </p>
