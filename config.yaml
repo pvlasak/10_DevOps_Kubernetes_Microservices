@@ -32,10 +32,10 @@ spec:
           periodSeconds: 5
         resources:
           requests: 
-            cpu: 100m
+            cpu: 50m
             memory: 64Mi
           limits:
-            cpu: 200m
+            cpu: 100m
             memory: 128Mi
 ---
 apiVersion: v1
@@ -85,6 +85,13 @@ spec:
           tcpSocket: 
             port: 8080
           periodSeconds: 5
+        resources:
+          requests: 
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            cpu: 100m
+            memory: 128Mi
 ---
 apiVersion: v1
 kind: Service
@@ -129,6 +136,13 @@ spec:
           grpc: 
             port: 3550
           periodSeconds: 5
+        resources:
+          requests: 
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            cpu: 100m
+            memory: 128Mi
 ---
 apiVersion: v1
 kind: Service
@@ -175,6 +189,13 @@ spec:
           grpc: 
             port: 50051
           periodSeconds: 5
+        resources:
+          requests: 
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            cpu: 100m
+            memory: 128Mi
 ---
 apiVersion: v1
 kind: Service
@@ -221,6 +242,13 @@ spec:
           grpc: 
             port: 7000
           periodSeconds: 5
+        resources:
+          requests: 
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            cpu: 140m
+            memory: 128Mi
 ---
 apiVersion: v1
 kind: Service
@@ -265,6 +293,13 @@ spec:
           grpc: 
             port: 50051
           periodSeconds: 5
+        resources:
+          requests: 
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            cpu: 140m
+            memory: 128Mi
 ---
 apiVersion: v1
 kind: Service
@@ -362,6 +397,13 @@ spec:
           grpc: 
             port: 7070
           periodSeconds: 5
+        resources:
+          requests: 
+            cpu: 70m
+            memory: 64Mi
+          limits:
+            cpu: 200m
+            memory: 128Mi
 ---
 apiVersion: v1
 kind: Service
@@ -410,7 +452,7 @@ spec:
           periodSeconds: 5
         resources:
           requests: 
-            cpu: 70m
+            cpu: 60m
             memory: 200Mi
           limits:
             cpu: 125m
@@ -474,6 +516,13 @@ spec:
           grpc: 
             port: 5050
           periodSeconds: 5
+        resources:
+          requests: 
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            cpu: 140m
+            memory: 128Mi
 ---
 apiVersion: v1
 kind: Service
@@ -533,7 +582,14 @@ spec:
           httpGet:
             path: "/_healthz" 
             port: 8080
-          periodSeconds: 5        
+          periodSeconds: 5
+        resources:
+          requests: 
+            cpu: 100m
+            memory: 64Mi
+          limits:
+            cpu: 200m
+            memory: 128Mi     
 ---
 apiVersion: v1
 kind: Service
