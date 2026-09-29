@@ -8,6 +8,10 @@ containerEnvVars:
   value: "7000"
 - name: DISABLE_PROFILER
   value: "1"
-
+probePeriodSeconds: 5
+resourceRequestsCpu:  50m
+resourceRequestsMemory: 64Mi
+resourceLimitsCpu: 140m
+resourceLimitsMemory: 128Mi
 
 servicePort: 7000

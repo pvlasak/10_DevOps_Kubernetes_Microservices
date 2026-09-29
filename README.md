@@ -1,6 +1,10 @@
 ### This repository is forked from Google repository
 
+#### Deployment using config.yaml 
+- create new namespace - e.g. "microservices"
+- deploy online shop by command: *kubectl apply -f config.yaml -n microservices*
 
+#### Deployment using Helm
 - `charts` directory is created to collected different helm charts
 - `values` directory collects the values files configuriting the template files inside the `charts` directory. 
 

@@ -6,6 +6,10 @@ containerPort: 50051
 containerEnvVars: 
 - name: PORT
   value: "50051"
-
+probePeriodSeconds: 5
+resourceRequestsCpu:  50m
+resourceRequestsMemory: 64Mi
+resourceLimitsCpu: 140m
+resourceLimitsMemory: 128Mi
 
 servicePort: 50051

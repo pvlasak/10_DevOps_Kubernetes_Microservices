@@ -23,11 +23,13 @@ spec:
           value: {{ .value | quote }}
         {{- end}}
         livenessProbe:
-          grpc: 
+          httpGet: 
+            path: {{ .Values.probePath }}
             port: {{ .Values.containerPort }}
           periodSeconds: {{ .Values.probePeriodSeconds }}
         readinessProbe:
-          grpc: 
+          httpGet: 
+            path: {{ .Values.probePath }}
             port: {{ .Values.containerPort }}
           periodSeconds: {{ .Values.probePeriodSeconds }}
         resources:

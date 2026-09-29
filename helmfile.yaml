@@ -7,12 +7,12 @@ releases:
       - volumeName: "redis-cart-data"
 
   - name: emailservice
-    chart: charts/microservice
+    chart: charts/microservice_tcp_probe
     values:
       - values/email-service-values.yaml
 
   - name: recommendationservice
-    chart: charts/microservice
+    chart: charts/microservice_tcp_probe
     values:
       - values/recommendation-service-values.yaml
 
@@ -52,7 +52,7 @@ releases:
       - values/checkout-service-values.yaml
 
   - name: frontend
-    chart: charts/microservice
+    chart: charts/microservice_http_probe
     values:
       - values/frontend-service-values.yaml
 

@@ -20,7 +20,11 @@ containerEnvVars:
   value: "checkoutservice:5050" 
 - name: AD_SERVICE_ADDR
   value: "adservice:9555"
-
+probePeriodSeconds: 5
+resourceRequestsCpu:  100m
+resourceRequestsMemory: 64Mi
+resourceLimitsCpu: 200m
+resourceLimitsMemory: 128Mi
 
 servicePort: 80
 serviceType: LoadBalancer

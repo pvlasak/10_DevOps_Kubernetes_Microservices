@@ -6,10 +6,12 @@ containerPort: 8080
 containerEnvVars: 
 - name: ENV_VAR_ONE
   value: "valueone"
-probePeriodSeconds: 5
-resourceRequestsCpu: 50m
-resourceRequestsMemory: 128Mi
-resourceLimitsCpu: 100m
-resourceLimitsMemory: 256Mi
+probePeriodSeconds: 2
+probePath: "/_healthz" 
+resourceRequestsCpu:  200m
+resourceRequestsMemory: 256Mi
+resourceLimitsCpu: 300m
+resourceLimitsMemory: 512Mi
+
 servicePort: 8080
 serviceType: ClusterIP

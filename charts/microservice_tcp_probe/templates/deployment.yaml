@@ -23,11 +23,11 @@ spec:
           value: {{ .value | quote }}
         {{- end}}
         livenessProbe:
-          grpc: 
+          tcpSocket: 
             port: {{ .Values.containerPort }}
           periodSeconds: {{ .Values.probePeriodSeconds }}
         readinessProbe:
-          grpc: 
+          tcpSocket: 
             port: {{ .Values.containerPort }}
           periodSeconds: {{ .Values.probePeriodSeconds }}
         resources:
